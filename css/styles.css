@@ -1,3 +1,6 @@
+/* Imports */
+@import url('https://use.fontawesome.com/releases/v5.15.4/css/all.css');
+
 /* Generic Styles */
 html 
 {
@@ -10,7 +13,6 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
 }
 
 /* Widget */
@@ -25,6 +27,8 @@ body
     border-radius: 5%;
     /* justify-content: center; */
     align-items: center;
+    color: white;
+    overflow: hidden !important;
 }
 
 /* Search Bar and Button */
@@ -37,9 +41,11 @@ body
 {
     height: 4vh;
     width: 30vh;
+    padding: 20px;
     margin-right: 30px;
     border-radius: 30px;
     font-size: 30px;
+    color: white;
 }
 .searchButton
 {
@@ -47,7 +53,99 @@ body
     width: 4vh;
     border-radius: 100%;
 }
+.searchButton::before
+{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 1.5vh;
+    content: "\f002";
+}
+.searchButton:hover
+{
+    background-color: rgb(128, 128, 128, 0.9);
+}
 .searchBar, .searchButton
 {
-    background-color: rgb(128, 128, 128, 0.5);
+    background-color: rgb(128, 128, 128, 0.4);
+    border-color: black;
 }
+
+/* Weather Display */
+.weatherWrapper
+{
+    /* margin-top: 10vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 38vh;
+    max-height: 100%;
+    width: 100%;
+}
+.temp
+{
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: .1em;
+}
+.location
+{
+    font-size: 48px;
+    /* font-weight: bold; */
+}
+.weatherIcon
+{
+    margin-top: -100px;
+    /* margin-bottom: -20px; */
+    width: 17vh;
+    height: 17vh;
+}
+
+/* Humidity & Wind Speed Display */
+.infoWrapper
+{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    font-size: 20px;
+}
+.windDisplay, .humidDisplay
+{
+    display: flex;
+}
+i.icon 
+{
+    color: white;
+}
+.humidity, .windSpeed
+{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    /* font-size: 48px; */
+    /* align-items: center; */
+}
+.apiVal
+{
+    font-size: 40px;
+    margin-bottom: .1em;
+}
+.windIcon::before
+{
+    font-family: 'Font Awesome 5 Free';
+    position: relative;
+    top: 10px;
+    font-weight: 900;
+    font-size: 2vh;
+    content: "\f72e";
+}
+.humidIcon::before
+{
+    font-family: 'Font Awesome 5 Free';
+    position: relative;
+    top: 10px;
+    font-weight: 900;
+    font-size: 2vh;
+    content: "\f773";
+}
+
