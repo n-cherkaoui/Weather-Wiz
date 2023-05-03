@@ -1,0 +1,53 @@
+/* Generic Styles */
+html 
+{
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+}
+body 
+{
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* Widget */
+.widget
+{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 38vh;
+    height: 48vh;
+    padding: 2vh;
+    border-radius: 5%;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+/* Search Bar and Button */
+.searchWrapper
+{
+    display: flex;
+    justify-content: center;
+}
+.searchBar
+{
+    height: 4vh;
+    width: 30vh;
+    margin-right: 30px;
+    border-radius: 30px;
+    font-size: 30px;
+}
+.searchButton
+{
+    height: 4vh;
+    width: 4vh;
+    border-radius: 100%;
+}
+.searchBar, .searchButton
+{
+    background-color: rgb(128, 128, 128, 0.5);
+}
