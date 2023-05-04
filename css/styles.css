@@ -6,6 +6,7 @@ html
 {
     background-image: url("../images/background.jpg");
     background-size: cover;
+    overflow: hidden;
 }
 body 
 {
@@ -13,6 +14,7 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
 }
 
 /* Widget */
@@ -28,6 +30,7 @@ body
     /* justify-content: center; */
     align-items: center;
     color: white;
+    overflow: hidden;
 }
 
 /* Search Bar and Button */
@@ -35,16 +38,22 @@ body
 {
     display: flex;
     justify-content: center;
+    overflow: hidden;
 }
 .searchBar
 {
     height: 4vh;
     width: 30vh;
-    padding: 20px;
+    padding-left: 1em;
     margin-right: 30px;
     border-radius: 30px;
-    font-size: 30px;
-    color: white;
+    font-size: 1.5vh;
+    color: rgb(185, 185, 185);
+    outline: none;
+}
+.searchBar::placeholder
+{
+    color: rgb(185, 185, 185);
 }
 .searchButton
 {
@@ -58,6 +67,7 @@ body
     font-weight: 900;
     font-size: 1.5vh;
     content: "\f002";
+    color: rgb(185, 185, 185);
 }
 .searchButton:hover
 {
@@ -66,7 +76,7 @@ body
 .searchBar, .searchButton
 {
     background-color: rgb(128, 128, 128, 0.4);
-    border-color: black;
+    /* border-color: black; */
 }
 
 /* Weather Display */
@@ -78,7 +88,6 @@ body
     align-items: center;
     justify-content: center;
     height: 38vh;
-    max-height: 100%;
     width: 100%;
     overflow: hidden;
 }
@@ -95,7 +104,7 @@ body
 }
 .weatherIcon
 {
-    margin-top: -100px;
+    margin-top: -5em;
     /* margin-bottom: -20px; */
     width: 17vh;
     height: 17vh;
@@ -148,4 +157,5 @@ i.icon
     font-size: 2vh;
     content: "\f773";
 }
+
 

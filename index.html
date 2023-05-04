@@ -7,8 +7,13 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
         <!-- javascript -->
-        <!-- <script src="https://kit.fontawesome.com/900133ce9d.js" crossorigin="anonymous"></script> -->
         <script src="scripts/script.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+              // Call your function(s) here
+              getLocation();
+            });
+        </script>
     </head>
 </html>
 
@@ -19,15 +24,16 @@
 
             <!-- Search Wrapper -->
             <div class="searchWrapper">
-                <input class="searchBar" type="text" placeholder="Search location">
-                <button class="searchButton"></button>
+                <input class="searchBar" id = "searchBar" type="text" placeholder="Search Location" onkeydown="handleKeyDown(event)">
+                <button class="searchButton" onclick="handleSearch()"></button>
+
             </div>
 
             <!-- Weather Wrapper -->
             <div class="weatherWrapper">
-                <img class = weatherIcon src="images/rainy-7.svg" alt="My SVG Image">
-                <span class = temp>71°C</span>
-                <span class = location>London</span>
+                <img class = weatherIcon id="weatherIcon" src="images/rainy-7.svg" alt="My SVG Image">
+                <span class="apiVal temp" id="temp">°C</span>
+                <span class="apiVal location" id="location"></span>
             </div>
 
                 <!-- Info Wrapper -->
@@ -37,7 +43,7 @@
                 <div class="humidDisplay">
                     <span class = humidIcon></span>
                     <div class = "humidity">
-                        <span class = "apiVal">27%</span>
+                        <span class="apiVal humidVal" id="humidity"></span>
                         <span class = "text">Humidity</span>
                     </div>
                 </div>
@@ -46,7 +52,7 @@
                 <div class="windDisplay">
                     <span class = windIcon></span>
                     <div class = "windSpeed">
-                        <span class = "apiVal">11 mph</span>
+                        <span class="apiVal windVal" id="windSpeed"></span>
                         <span class = "text">Wind Speed</span>
                     </div>
                 </div>
