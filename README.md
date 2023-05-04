@@ -1,4 +1,4 @@
-# Weather Wizard
+# Weather Wiz
 
 Weather Wizard is a simple, easy-to-use weather application that provides current weather information for any location worldwide. With a clean and intuitive interface, users can quickly search for weather conditions in their desired locations.
 
